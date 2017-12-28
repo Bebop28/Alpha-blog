@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'static_pages#new'
+  get 'articles/new'
 
-  get '/about', to: 'static_pages#about' 
+  root 'static_pages#new'
+  get '/about', to: 'static_pages#about'
+  resources :articles 
 end
